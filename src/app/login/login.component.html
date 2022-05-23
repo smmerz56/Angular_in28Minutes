@@ -1,0 +1,38 @@
+<h1>Login!</h1>
+
+<div class="container">
+    <!-- ng/Angular Attribute/directive *ngIf -->
+    <div class="alert alert-warning" *ngIf="invalidLogin">{{errorMessage}}</div>
+
+    <!-- Angular modules(ngModel) are imported in the app-modules.ts file instead of every file they are used -->
+    <div>
+        User Name : <input type="text" name="username" [(ngModel)]="username">
+        Password : <input type="password" name="password" [(ngModel)]="password">
+
+        <button (click)=handleLogin() class="btn btn-success">Login</button>
+    </div>
+</div>
+
+
+
+<!-- Notes -->
+<!-- <button (event)=whatYouWantToDo()>Login</button> -->
+
+<!-- *******************Data Binding******************* -->
+<!-- Interpolation 
+    User Name : {{username}} 
+    Ties view to the value of the property
+    One way data binding. Takes data from a
+    component property and displaying it on the view-->
+
+<!-- Event Binding 
+    <button (click)=handleLogin()>Login</button> 
+    Binding an event/user action on the view from a method-->
+
+<!-- Two way data Binding 
+    [(ngModel)]="username". This is called an Angular directive.
+    Banana in a box. Initial data was coming in from a component property.
+    When user changes the name the modified data gets binded back to the 
+    component property-->
+
+
